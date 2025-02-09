@@ -103,9 +103,9 @@ public class C03PracHotel {
 		
 		// 테마 호텔 객체 생성
 		ThemeHotel tmH = new ThemeHotel("디즈니 호텔", "파리", "디즈니 캐릭터 테마");
-		ShowInfo(lxH);		// 럭셔리 호텔 정보 출력
+//		ShowInfo(lxH);		// 럭셔리 호텔 정보 출력
 		System.out.println();
-		ShowInfo(tmH);		// 테마 호텔 정보 출력
+//		ShowInfo(tmH);		// 테마 호텔 정보 출력
 		
 		
 		

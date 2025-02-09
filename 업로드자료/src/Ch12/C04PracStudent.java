@@ -26,7 +26,7 @@ class Student {
 }
 public class C04PracStudent {
 	public static void main(String[] args) {
-		Student dong = new Student(;
+		Student dong = new Student();
 		Student hong = new Student();
 		dong.name = "이동하";
 		dong.age = 12;
