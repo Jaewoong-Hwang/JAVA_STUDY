@@ -9,7 +9,7 @@ public class C03ClassNotFound {
 	public static void main(String[] args) {
 		try {
 			
-			Class<?> myClass = Class.forName("Ch18.Ch18");
+			Class<?> myClass = Class.forName("Ch23.Ch18");
 			System.out.println("클래스 로딩 성공~!!!");
 		} catch(Exception e) {
 			e.printStackTrace();

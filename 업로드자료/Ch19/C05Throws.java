@@ -18,6 +18,7 @@ import java.util.Scanner;
 
 //2. 메소드에게 예외를 떠넘기기		(rethrowing)		: 메소드에서 예외를 처리하지 않고, 해당 예외를 다시 호출한 메소드로 떠넘기는 방식
 //													: 이는 주로 예외를 발생한 메소드가 예외를 해결할 수 없는 경우에 사용
+//													: throws 키워드는 반드시 작성해야만 떠넘기기를 할 수 있는건 아님.
 
 class CustomException extends Exception {
 	public CustomException(String message, Throwable cause) {
@@ -52,24 +53,26 @@ public class C05Throws {
 	// ------------------------------------------------------------------------
 	// 02. 메서드에게 예외를 떠넘기기
 	// 2-1. rethrowing 첫번째 예제
-	public static void someMethod() throws CustomException {
-		try {
-			// 예외 발생 가능성 있는 코드
-			int result = 10 / 0;			// ArithmeticEception 발생
-		} catch (ArithmeticException e) {
-			System.out.println("ArithmeticException Caught in someMethod : " + e.getMessage());
-			
-			// 예외를 다시 던짐 ( CustomException 예외 발생)
-			throw new CustomException("Custom Exception", e);
-		
-			
-		}
-	}
-	
-	public static void main(String[] args) throws CustomException {
-		someMethod();
-		
-	}
+//	public static void someMethod() throws CustomException {
+//		try {
+//			// 예외 발생 가능성 있는 코드
+//			int result = 10 / 0;			// ArithmeticEception 발생
+//		} catch (ArithmeticException e) {
+//			System.out.println("ArithmeticException Caught in someMethod : " + e.getMessage());
+//			
+//		
+//			// 예외를 다시 던짐 ( CustomException 예외 발생)
+//			throw new CustomException("Custom Exception", e);
+//			
+//			
+//			
+//		}
+//	}
+//	
+//	public static void main(String[] args) throws CustomException {
+//		someMethod();
+//		
+//	}
 	// 예외를 떠넘기는 메서드가 throws를 사용하여 예외를 선언했다고 해도, 해당 메서드를 호출한 곳에서 ''반드시'' 예외를 처리할 필요는 없음.
 	// 메서드를 호출한 곳에서 예외를 처리하지 않으면, 예외는 호출 스택을 따라 더 상위의 메서드로 전파됨.
 	// 최종적으로 예외가 처리되 않은 채로 프로그램이 종료될 수 있음.
@@ -80,6 +83,33 @@ public class C05Throws {
 	
 	// ------------------------------------------------------------------------
 		
-		
+	// ------------------------------------------------------------------------
+	
+	// 2-2. rethrowing 두번째 예제
+//	public static void methodA() {
+//		try {
+//			methodB();
+//		} catch (ArithmeticException e) {
+//			throw e;
+//			
+//		}
+//		 
+//	}
+//	public static void methodB() {
+//		int result = 10 / 0;
+//		
+//	}
+//	public static void main(String[] args){
+//		methodA();	
+//		
+//	}
+//	
+	
+	
+	
+	
+	
+	
+	
 
 }
